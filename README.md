@@ -13,6 +13,8 @@ A public-ready, zero-runtime-dependency starting point for a Roam Depot extensio
 
 Never put API keys, graph tokens, private prompts, or graph data in source code. Store user-entered configuration with `extensionAPI.settings`; review whether a setting is suitable for graph sync before using it for sensitive credentials.
 
+If the extension writes `Name::` blocks: scalars are `Name:: tail`; multi-value page edges are a bare `Name::` plus child `[[pages]]` (or a refs-only tail). Never transact `:harc/*` or `:entity/attrs`. Never rewrite `BT_attr*` (owned by roam-auto-attribute) or `Aliases::` comma lists (owned by roam-aliases). See roam-plugin-dev rule 20.
+
 ## Commands
 
 ```bash
